@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PageDetailsViewController.swift
 //  MoviesApp
 //
 //  Created by Yusuf Akbaş on 29.12.2023.
@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PageDetails: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+    
 
-
+  
 }
-
