@@ -11,7 +11,9 @@ class HomePage: UIViewController {
     
     
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    
     var moviesList = [Movies]()
+    var viewModel = HomePageViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,18 +21,11 @@ class HomePage: UIViewController {
         moviesCollectionView.delegate = self
         moviesCollectionView.dataSource = self
         
-        let m1 = Movies(id: 1, name: "Django", image: "django", price: 24)
-        let m2 = Movies(id: 2, name: "Interstellar", image: "interstellar", price: 32)
-        let m3 = Movies(id: 3, name: "Inception", image: "inception", price: 16)
-        let m4 = Movies(id: 4, name: "The Hateful Eight", image: "thehatefuleight", price: 28)
-        let m5 = Movies(id: 5, name: "The Pianist", image: "thepianist", price: 18)
-        let m6 = Movies(id: 6, name: "Anadoluda", image: "anadoluda", price: 10)
-        moviesList.append(m1)
-        moviesList.append(m2)
-        moviesList.append(m3)
-        moviesList.append(m4)
-        moviesList.append(m5)
-        moviesList.append(m6)
+        _ = viewModel.moviesList.subscribe(onNext: { list in
+            self.moviesList = list
+            self.moviesCollectionView.reloadData()
+        })
+
         
         let design = UICollectionViewFlowLayout()
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)

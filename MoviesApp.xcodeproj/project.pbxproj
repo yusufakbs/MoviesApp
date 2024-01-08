@@ -16,6 +16,9 @@
 		40F00FB42B3E2C8F004943A8 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00FB32B3E2C8F004943A8 /* Movies.swift */; };
 		40F00FB62B3E2D19004943A8 /* PageDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00FB52B3E2D19004943A8 /* PageDetails.swift */; };
 		40F00FB82B3E2F66004943A8 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F00FB72B3E2F66004943A8 /* MoviesCell.swift */; };
+		40F8A5AD2B4C2885005FE654 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40F8A5AC2B4C2885005FE654 /* RxSwift */; };
+		40F8A5B02B4C28B3005FE654 /* MoviesDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8A5AF2B4C28B3005FE654 /* MoviesDaoRepository.swift */; };
+		40F8A5B32B4C28CF005FE654 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F8A5B22B4C28CF005FE654 /* HomePageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		40F00FB32B3E2C8F004943A8 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		40F00FB52B3E2D19004943A8 /* PageDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDetails.swift; sourceTree = "<group>"; };
 		40F00FB72B3E2F66004943A8 /* MoviesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCell.swift; sourceTree = "<group>"; };
+		40F8A5AF2B4C28B3005FE654 /* MoviesDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDaoRepository.swift; sourceTree = "<group>"; };
+		40F8A5B22B4C28CF005FE654 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F8A5AD2B4C2885005FE654 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,7 @@
 		40F00FAE2B3E2C28004943A8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				40F8A5AE2B4C28A1005FE654 /* repo */,
 				40F00FB12B3E2C49004943A8 /* entity */,
 			);
 			path = Data;
@@ -85,6 +92,7 @@
 		40F00FAF2B3E2C3A004943A8 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				40F8A5B12B4C28C2005FE654 /* viewModel */,
 				40F00FB22B3E2C5A004943A8 /* tableView */,
 				40F00FB02B3E2C42004943A8 /* views */,
 			);
@@ -116,6 +124,22 @@
 			path = tableView;
 			sourceTree = "<group>";
 		};
+		40F8A5AE2B4C28A1005FE654 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				40F8A5AF2B4C28B3005FE654 /* MoviesDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		40F8A5B12B4C28C2005FE654 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40F8A5B22B4C28CF005FE654 /* HomePageViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +156,9 @@
 			dependencies = (
 			);
 			name = MoviesApp;
+			packageProductDependencies = (
+				40F8A5AC2B4C2885005FE654 /* RxSwift */,
+			);
 			productName = MoviesApp;
 			productReference = 40F00F972B3E2B5C004943A8 /* MoviesApp.app */;
 			productType = "com.apple.product-type.application";
@@ -160,6 +187,9 @@
 				Base,
 			);
 			mainGroup = 40F00F8E2B3E2B5C004943A8;
+			packageReferences = (
+				40F8A5A12B4C2827005FE654 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 40F00F982B3E2B5C004943A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,7 +221,9 @@
 				40F00F9F2B3E2B5C004943A8 /* HomePage.swift in Sources */,
 				40F00F9B2B3E2B5C004943A8 /* AppDelegate.swift in Sources */,
 				40F00FB42B3E2C8F004943A8 /* Movies.swift in Sources */,
+				40F8A5B32B4C28CF005FE654 /* HomePageViewModel.swift in Sources */,
 				40F00FB62B3E2D19004943A8 /* PageDetails.swift in Sources */,
+				40F8A5B02B4C28B3005FE654 /* MoviesDaoRepository.swift in Sources */,
 				40F00F9D2B3E2B5C004943A8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40F8A5A12B4C2827005FE654 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40F8A5AC2B4C2885005FE654 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40F8A5A12B4C2827005FE654 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 40F00F8F2B3E2B5C004943A8 /* Project object */;
 }
